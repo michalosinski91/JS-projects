@@ -35,11 +35,11 @@ const words = [
   "property"
 ];
 
-// randomly selects the word
 var selectedWord;
 const correctLetters = [];
 const wrongLetters = [];
 
+//select a random word from the list and run the displayWord function to create initial view
 function selectWord() {
   selectedWord = words[Math.floor(Math.random() * words.length)];
   displayWord();
@@ -140,12 +140,16 @@ window.addEventListener("keydown", e => {
 
 // restart game
 playAgainBtn.addEventListener("click", () => {
+  //clears the correct and wrong letters arrays
   correctLetters.length = 0;
   wrongLetters.length = 0;
+  //runs the word selection function
   selectWord();
+  //clears the hangman figurine
   updateWrongLettersEl();
+  //removes the popup notification form view
   popup.style.display = "none";
 });
 
-// initial view update
+// initial word selection and view update
 selectWord();
