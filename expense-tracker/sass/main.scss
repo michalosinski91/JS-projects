@@ -1,0 +1,176 @@
+/* variables */
+$shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+$color-positive: #2ecc71;
+$color-negative: #c0392b;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin: 3rem auto;
+  width: 35rem;
+}
+
+.heading {
+  &--primary {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.4rem;
+  }
+
+  &--secondary {
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 1rem;
+    margin: 4rem 0 1rem;
+    font-size: 1.8rem;
+  }
+
+  &--tertiary {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+  }
+}
+
+.balance {
+  &__amount {
+    letter-spacing: 1px;
+    margin: 0;
+    font-size: 2.6rem;
+    font-weight: bold;
+  }
+
+  &__summary {
+    background-color: #fff;
+    box-shadow: $shadow;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+  }
+
+  &__group {
+    flex: 1;
+    text-align: center;
+
+    &:first-of-type {
+      border-right: 1px solid #dedede;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    letter-spacing: 1px;
+
+    &--positive {
+      color: $color-positive;
+    }
+
+    &--negative {
+      color: $color-negative;
+    }
+  }
+}
+
+.form {
+  font-size: 1.6rem;
+
+  &__label {
+    display: inline-block;
+    margin: 1rem 0;
+  }
+
+  &__input {
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    display: block;
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+.history {
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 4rem;
+  }
+
+  &__entry {
+    background-color: #fff;
+    box-shadow: $shadow;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.4rem;
+
+    &--positive {
+      border-right: 5px solid $color-positive;
+    }
+
+    &--negative {
+      border-right: 5px solid $color-negative;
+    }
+
+    &:hover .history__button {
+      opacity: 1;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 2rem;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #9c88ff;
+  box-shadow: $shadow;
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
+  padding: 1rem;
+  width: 100%;
+
+  &:focus {
+    outline: 0;
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Expense tracker</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading--primary">Expense Tracker</h1>
+      <div class="balance">
+        <h4 class="heading--tertiary">Your balance</h4>
+        <p class="balance__amount" id="balance">$0.00</p>
+        <div class="balance__summary">
+          <div class="balance__group">
+            <h4 class="heading--tertiary">Income</h4>
+            <div
+              class="balance__text balance__text--positive"
+              id="total-income"
+            >
+              +$0.00
+            </div>
+          </div>
+          <div class="balance__group">
+            <h4 class="heading--tertiary">Expense</h4>
+            <div
+              class="balance__text balance__text--negative"
+              id="total-expense"
+            >
+              -$0.00
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="history">
+        <h3 class="heading--secondary">History</h3>
+        <ul class="history__list" id="list">
+          <!--
+            <li class="history__entry history__entry--positive">
+              Cash <span>+$300</span> <button class="history__button">x</button>
+            </li>
+            <li class="history__entry history__entry--negative">
+              Camera <span>-$100</span> <button class="history__button">x</button>
+            </li>
+
+          -->
+        </ul>
+      </div>
+      <div class="transaction">
+        <h3 class="heading--secondary">Add new transaction</h3>
+        <form class="form" id="form">
+          <div class="form__group">
+            <label for="text" class="form__label">Text</label>
+            <input
+              type="text"
+              class="form__input"
+              id="text"
+              placeholder="Enter text..."
+            />
+          </div>
+          <div class="form__group">
+            <label for="amount" class="form__label"
+              >Amount <br />
+              (negative - expense, positive - income)
+            </label>
+            <input
+              type="number"
+              id="amount"
+              class="form__input"
+              placeholder="Enter amount..."
+            />
+          </div>
+          <button class="btn" id="submit">Add transaction</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
