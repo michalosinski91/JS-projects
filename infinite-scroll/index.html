@@ -4,9 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <title>Infinite Scroll</title>
   </head>
   <body>
+    <h1>My Blog</h1>
+    <div class="filter">
+      <input
+        type="text"
+        placeholder="Filter posts..."
+        class="filter__input"
+        id="filter"
+      />
+    </div>
+    <div class="posts">
+      <div class="posts__entry">
+        <div class="posts__number">1</div>
+        <div class="posts__info">
+          <h2 class="posts__title">Post One</h2>
+          <p class="posts__body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+            exercitationem cum porro. Voluptatum, excepturi modi nostrum
+            eligendi unde similique voluptates!
+          </p>
+        </div>
+      </div>
+      <div class="posts__entry">
+        <div class="posts__number">2</div>
+        <div class="posts__info">
+          <h2 class="posts__title">Post Two</h2>
+          <p class="posts__body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+            exercitationem cum porro. Voluptatum, excepturi modi nostrum
+            eligendi unde similique voluptates!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="loader">
+      <div class="loader__circle"></div>
+      <div class="loader__circle"></div>
+      <div class="loader__circle"></div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
