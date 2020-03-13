@@ -13,6 +13,13 @@ let randomWord;
 let score;
 let time;
 let timeInterval;
+let difficulty =
+  localStorage.getItem("difficulty") !== null
+    ? localStorage.getItem("difficulty")
+    : "medium";
+
+// set difficulty select value
+difficultySelectEl.value = difficulty;
 
 //Focus on text on load
 textEl.focus();
@@ -96,6 +103,7 @@ function newGame() {
 }
 
 //Event listeners
+//Typing
 textEl.addEventListener("input", e => {
   //gets the input text
   const insertedText = e.target.value;
@@ -105,9 +113,30 @@ textEl.addEventListener("input", e => {
     nextWord();
     updateScore();
     e.target.value = "";
-    time += 4;
+
+    // adding time based on difficulty settings
+    if (difficulty === "hard") {
+      time += 2;
+    } else if (difficulty === "medium") {
+      time += 3;
+    } else {
+      time += 5;
+    }
+
     updateTime();
   }
+});
+
+// Settings menu
+settingsBtn.addEventListener("click", () =>
+  settingsEl.classList.toggle("settings--hide")
+);
+
+// Settings select
+settingsFormEl.addEventListener("change", e => {
+  difficulty = e.target.value;
+  //store the difficulty in local storage
+  localStorage.setItem("difficulty", difficulty);
 });
 
 // Initial game setup - fetch list of words and
