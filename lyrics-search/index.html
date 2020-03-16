@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Lyrics Search</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="heading heading--primary">Lyrics Search</h1>
+      <form id="form" class="form">
+        <input
+          type="text"
+          id="search"
+          class="form__input"
+          placeholder="Enter artist or song name..."
+          aria-placeholder="Enter artist or song name"
+        />
+        <button class="btn btn--search">Search</button>
+      </form>
+    </header>
+    <div class="results">
+      <p class="results__text" id="results">Results will be displayed here</p>
+
+      <div class="results__more" id="more"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

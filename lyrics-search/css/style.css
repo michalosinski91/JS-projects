@@ -1,0 +1,105 @@
+:root {
+  font-size: 62.5%; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif; }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+  background-image: url("https://images.unsplash.com/photo-1583852767763-b850d3e33f5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+  padding: 10rem 0;
+  position: relative; }
+  .header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .header * {
+    z-index: 1; }
+
+.heading {
+  text-align: center; }
+  .heading--primary {
+    font-size: 3.6rem;
+    margin: 0 0 3rem; }
+  .heading--secondary {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    line-height: 2.4rem; }
+
+.form {
+  position: relative;
+  width: 60rem;
+  max-width: 100%; }
+  .form__input {
+    border: 0;
+    border-radius: 5rem;
+    font-size: 1.6rem;
+    padding: 1.5rem 3rem;
+    width: 100%; }
+    .form__input:focus {
+      outline: none; }
+
+.results {
+  margin: 3rem auto;
+  max-width: 100%;
+  width: 60rem; }
+  .results__text {
+    font-size: 1.4rem; }
+  .results__heading {
+    font-weight: 300; }
+  .results__more {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+.btn {
+  cursor: pointer;
+  background-color: #6a1fff;
+  border: 0;
+  color: #fff; }
+  .btn--search {
+    border-radius: 5rem;
+    font-size: 1.6rem;
+    padding: 1.3rem 3rem;
+    position: absolute;
+    top: 2px;
+    right: 2px; }
+  .btn--song {
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem; }
+  .btn--more {
+    border-radius: 1rem;
+    padding: 0.5rem 1.5rem;
+    margin: 1.5rem 2rem; }
+  .btn:active {
+    transform: scale(0.95); }
+  .btn:focus {
+    outline: none; }
+
+.songs {
+  list-style: none;
+  padding: 0; }
+  .songs__entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+    font-size: 1.4rem; }
