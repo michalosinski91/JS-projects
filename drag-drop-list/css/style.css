@@ -1,0 +1,78 @@
+:root {
+  font-size: 62.5%;
+  --border-color: #e3e5e4;
+  --background-color: #c3c7ca; }
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  height: 100vh; }
+
+.heading {
+  font-size: 2.8rem;
+  margin: 1rem 0; }
+
+.text {
+  font-size: 1.4rem; }
+
+.draggable-list {
+  width: 60rem;
+  max-width: 100%;
+  padding: 0;
+  margin: 2rem 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+  color: #34444f; }
+  .draggable-list__entry {
+    display: flex;
+    flex: 1; }
+    .draggable-list__entry:not(:last-of-type) {
+      border-bottom: 1px solid var(--border-color); }
+    .draggable-list__entry--right .draggable-list__name {
+      color: #3ae374; }
+    .draggable-list__entry--wrong .draggable-list__name {
+      color: #ff3838; }
+    .draggable-list__entry--over .draggable-list__detail {
+      background-color: #eaeaea; }
+  .draggable-list__number {
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8rem;
+    height: 6rem;
+    width: 6rem; }
+  .draggable-list__detail {
+    cursor: pointer;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    flex: 1; }
+  .draggable-list__name {
+    margin: 0 2rem 0 0; }
+
+.check-btn {
+  background-color: var(--background-color);
+  border: none;
+  color: #34444f;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  cursor: pointer; }
+  .check-btn:active {
+    transform: scale(0.98); }
+  .check-btn:focus {
+    outline: none; }
